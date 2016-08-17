@@ -3,14 +3,14 @@ Passport<%= classPrefix %> = require 'passport-<%= instancePrefix %>'
 
 class <%= classPrefix %>Strategy extends Passport<%= classPrefix %>
   constructor: (env) ->
-    throw new Error('Missing required environment variable: slurry_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_ID')     if _.isEmpty process.env.slurry_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_ID
-    throw new Error('Missing required environment variable: slurry_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_SECRET') if _.isEmpty process.env.slurry_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_SECRET
-    throw new Error('Missing required environment variable: slurry_<%= constantPrefix %>_<%= constantPrefix %>_CALLBACK_URL')  if _.isEmpty process.env.slurry_<%= constantPrefix %>_<%= constantPrefix %>_CALLBACK_URL
+    throw new Error('Missing required environment variable: SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_ID')     if _.isEmpty process.env.SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_ID
+    throw new Error('Missing required environment variable: SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_SECRET') if _.isEmpty process.env.SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_SECRET
+    throw new Error('Missing required environment variable: SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CALLBACK_URL')  if _.isEmpty process.env.SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CALLBACK_URL
 
     options = {
-      clientID:     process.env.slurry_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_ID
-      clientSecret: process.env.slurry_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_SECRET
-      callbackUrl:  process.env.slurry_<%= constantPrefix %>_<%= constantPrefix %>_CALLBACK_URL
+      clientID:     process.env.SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_ID
+      clientSecret: process.env.SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_SECRET
+      callbackUrl:  process.env.SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CALLBACK_URL
     }
 
     super options, @onAuthorization
