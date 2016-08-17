@@ -47,7 +47,7 @@
     "fs-cson": "^0.3.2",
     "jsonschema": "^1.1.0",
     "lodash": "^4.11.1",
-    "meshblu-config": "^4.0.0",
+    "meshblu-config": "^6.0.0",
     "meshblu-encryption": "^1.0.3",
     "morgan": "^1.6.1",
     "passport": "^0.3.2",
