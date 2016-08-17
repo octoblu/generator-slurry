@@ -31,6 +31,7 @@ describe 'app', ->
       src/configurations/public-filtered-stream/job.coffee
       src/configurations/public-filtered-stream/configure.cson
       src/configurations/public-filtered-stream/response.cson
+      src/jobs/.gitignore
       test/test_helper.coffee
       test/mocha.opts
       command.js
