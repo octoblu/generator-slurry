@@ -178,7 +178,6 @@ src/
 │   │   ├── job.coffee
 │   │   ├── form.cson
 │   │   ├── configuration.cson
-│   │   └── response.cson
 ```
 
 ## Create a job
