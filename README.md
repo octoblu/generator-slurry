@@ -23,6 +23,8 @@
   - [Modify the passport configuration](#modify-the-passport-configuration)
     - [User Required Properties](#user-required-properties)
         - [Example](#example)
+  - [Create a configuration](#create-a-configuration)
+    - [Configuration directory format](#configuration-directory-format)
   - [Create a job](#create-a-job)
     - [Job directory format](#job-directory-format)
       - [list-events-by-user (Job directory)](#list-events-by-user-job-directory)
@@ -170,12 +172,12 @@ Configurations are stored in src/configurations. When the service first comes on
 ```
 src/
 ├── configurations
-│   ├── list-events-by-user
+│   ├── autobot
 │   │   ├── action.coffee
 │   │   ├── index.coffee
-│   │   ├── configuration.coffee
+│   │   ├── job.coffee
 │   │   ├── form.cson
-│   │   ├── message.cson
+│   │   ├── configuration.cson
 │   │   └── response.cson
 ```
 
