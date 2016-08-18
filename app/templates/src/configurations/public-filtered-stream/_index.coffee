@@ -3,5 +3,4 @@ module.exports = {
   form:       require './form'
   job:        require './job'
   configure:  require './configure'
-  response:   require './response'
 }

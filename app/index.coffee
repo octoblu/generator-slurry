@@ -71,7 +71,6 @@ class OctobluServiceGenerator extends yeoman.Base
     @template "src/configurations/public-filtered-stream/_index.coffee", "src/configurations/public-filtered-stream/index.coffee", context
     @template "src/configurations/public-filtered-stream/_job.coffee", "src/configurations/public-filtered-stream/job.coffee", context
     @template "src/configurations/public-filtered-stream/_form.cson", "src/configurations/public-filtered-stream/form.cson", context
-    @template "src/configurations/public-filtered-stream/_response.cson", "src/configurations/public-filtered-stream/response.cson", context
     @template "src/jobs/_gitignore", "src/jobs/.gitignore", context
     @template "test/_mocha.opts", "test/mocha.opts", context
     @template "test/_test_helper.coffee", "test/test_helper.coffee", context
