@@ -16,7 +16,7 @@ class OctobluServiceGenerator extends yeoman.Base
 
   initializing: =>
     @appname = _.kebabCase @appname
-    @noslurry = _.replace @appname, /^slurry-/, ''
+    @noSlurry = _.replace @appname, /^slurry-/, ''
     @env.error 'appname must start with "slurry-", exiting.' unless _.startsWith @appname, 'slurry-'
 
   prompting: =>
@@ -50,15 +50,17 @@ class OctobluServiceGenerator extends yeoman.Base
     @copy '_gitignore', '.gitignore'
 
   writing: =>
-    filePrefix     = _.kebabCase @noslurry
-    instancePrefix = _.camelCase @noslurry
+    filePrefix     = _.kebabCase @noSlurry
+    instancePrefix = _.camelCase @noSlurry
     classPrefix    = _.upperFirst instancePrefix
-    constantPrefix = _.toUpper _.snakeCase @noslurry
+    constantPrefix = _.toUpper _.snakeCase @noSlurry
+    deviceType     = "slurry:#{@noSlurry}"
 
     context = {
       @githubUrl
       @realname
       @appname
+      deviceType
       filePrefix
       classPrefix
       instancePrefix
@@ -87,10 +89,10 @@ class OctobluServiceGenerator extends yeoman.Base
     return if @skipInstall
 
     @installDependencies npm: true, bower: false
-    @npmInstall "passport-#{@noslurry}", save: true
+    @npmInstall "passport-#{@noSlurry}", save: true
 
   end: =>
     return if @skipInstall
-    @log "\nBy the way, I installed 'passport-#{@noslurry}', so if that's not right, you should fix it.\n"
+    @log "\nBy the way, I installed 'passport-#{@noSlurry}', so if that's not right, you should fix it.\n"
 
 module.exports = OctobluServiceGenerator
