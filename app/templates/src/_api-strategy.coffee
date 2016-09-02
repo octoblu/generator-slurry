@@ -10,7 +10,7 @@ class <%= classPrefix %>Strategy extends Passport<%= classPrefix %>
     options = {
       clientID:     process.env.SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_ID
       clientSecret: process.env.SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CLIENT_SECRET
-      callbackUrl:  process.env.SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CALLBACK_URL
+      callbackURL:  process.env.SLURRY_<%= constantPrefix %>_<%= constantPrefix %>_CALLBACK_URL
     }
 
     super options, @onAuthorization
